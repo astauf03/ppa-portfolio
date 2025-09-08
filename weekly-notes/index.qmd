@@ -1,0 +1,9 @@
+---
+title: "Weekly Notes"
+listing: 
+  contents: -
+  sort: "data desc"
+  type: default
+format: html
+---
+
