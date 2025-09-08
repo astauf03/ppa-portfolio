@@ -15,8 +15,9 @@ Advanced spatial analysis and data science for urban planning and public policy.
 - **Final Project:** Capstone modeling challenge
 
 ## About Me
-[Students will customize this section]
+Greetings! My name is Alexandra Stauffer, but you can call me Alex. I studied anthropology in my undergrad. This course may be a requirement for the MUSA program, but I am looking forward to learning predictability practices under different professional lens. 
+
 
 ## Contact
-- Email: [your.email@upenn.edu]
-- GitHub: [@your-username]
+- Email: [astauf03@upenn.edu]
+- GitHub: [@astauf03]
