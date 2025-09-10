@@ -10,14 +10,14 @@ This portfolio documents my learning journey in Public Policy Analytics (MUSA 50
 Advanced spatial analysis and data science for urban planning and public policy.
 
 ## Portfolio Structure
-- **Weekly Notes:** My learning reflections and key concepts
-- **Labs:** Completed assignments and analyses
-- **Final Project:** Capstone modeling challenge
+- **Weekly Notes:** learning reflections and key concepts
+- **Labs:** completed assignments and analyses
+- **Final Project:** capstone modeling challenge
 
 ## About Me
-Greetings. My name is Alexandra Stauffer, but you can call me Alex. I studied anthropology in my undergrad. This course may be a requirement for the MUSA program, but I am looking forward to learning predictability practices under different professional lens. 
+Greetings. My name is Alexandra Stauffer, an Urban Spatial Analytics student. I studied anthropology in my undergrad and became interested in geospatial realtionships and their applications in the real world. 
 
 
 ## Contact
-- Email: [astauf03@upenn.edu]
+- Email: [astauf03@upenn.edu, astauf03@gmail.com]
 - GitHub: [@astauf03]

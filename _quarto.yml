@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Alex Stauffer - MUSA 5080 Portfolio"
+  title: "Alexandra Stauffer - MUSA 5080 Portfolio"
   description: "empty" 
   navbar:
     left:
