@@ -1,23 +1,24 @@
 ---
-title: "Week 1 Notes - Course Introduction"
-date: "2025-09-08"
+title: Week 2 Notes
+date: "2025-09-15"
 ---
 
-## Key Concepts Learned
+### Key Concepts Learned  
 - PPA is the intersection of data analytics and policy avocation.
 - [Technical skills covered]
 
-## Coding Techniques
+### Coding Techniques
 - [New R functions or approaches]
 - [Quarto features learned]
 
-## Questions & Challenges
+### Questions & Challenges
 - [What I didn't fully understand]
 - [Areas needing more practice]
 
-## Connections to Policy
+### Connections to Policy
 - [How this week's content applies to real policy work]
 
-## Reflection
+### Reflection
 - [What was most interesting]
 - [How I'll apply this knowledge]
+
