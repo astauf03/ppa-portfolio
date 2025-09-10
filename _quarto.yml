@@ -6,12 +6,12 @@ website:
   title: "Alex Stauffer - MUSA 5080 Portfolio"
   description: "empty" 
   navbar:
-  title: "Portfolio"
     left:
       - href: index.qmd
         text: Home
       - href: about.qmd
         text: "About"
+      - href: weekly-notes/
       - text: "Weekly Notes"
         menu:
           - href: weekly-notes/
