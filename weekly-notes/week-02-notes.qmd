@@ -4,19 +4,18 @@ date: "2025-09-15"
 ---
 
 ### Key Concepts Learned  
-- PPA is the intersection of data analytics and policy avocation.
+- Setting up labs and learning to add data to lab.
 - [Technical skills covered]
 
 ### Coding Techniques
-- [New R functions or approaches]
-- [Quarto features learned]
+- mutate(), select(),rename()
 
 ### Questions & Challenges
 - [What I didn't fully understand]
 - [Areas needing more practice]
 
 ### Connections to Policy
-- [How this week's content applies to real policy work]
+- Algorithms play a role in predicting criminal justice, housing, finance, and healthcare decisions. 
 
 ### Reflection
 - [What was most interesting]
