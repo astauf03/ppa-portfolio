@@ -137,9 +137,15 @@ select(car_data, Model, year, age, Mileage, mileage_per_year)
 
 ```{r categorize-cars}
 # Create a price_category column where if price is < 15000, its is coded as budget, between 15000 and 30000 is midrange and greater than 30000 is mid-range (use case_when)
-
+car_data <- car_data %>%
+  mutate(price_category = case_when(
+    Price < 15000 ~ "budget",
+    Price >= 15000 & Price <= 30000 ~ "mid-range",
+    Price > 30000 ~ "high-end"
+  ))
 
 # Check your categories select the new column and show it
+select(car_data, Price, price_category)
 ```
 
 # Exercise 4: Filtering Practice
@@ -148,31 +154,36 @@ select(car_data, Model, year, age, Mileage, mileage_per_year)
 
 ```{r basic-filtering}
 # Find all Toyota cars
-
+toyota_cars <- filter(car_data, Manufacturer == "Toyota")
 
 # Find cars with mileage less than 30,000
-
+low_milage <- filter(car_data, Mileage < 30000)
 
 # Find luxury cars (from price category) with low mileage
-
+lux_low_mileage <- filter(car_data, price_category == "high-end", Mileage < 30000)
+  
 ```
 
 ## 4.2 Multiple Conditions
 
 ```{r multiple-conditions}
 # Find cars that are EITHER Honda OR Nissan
-
+honda_nissan <- filter(car_data, Manufacturer == "Honda" | Manufacturer == "Nissan")
 
 # Find cars with price between $20,000 and $35,000
-
+price_point <- filter(car_data, Price >= 20000 & Price <= 35000 )
 
 # Find diesel cars less than 10 years old
-
+young_diesel <- filter(car_data, `Fuel type` =="Diesel", age<10 )
+head(young_diesel)
+car_data %>%
+  filter(`Fuel type` == "Diesel", age < 10) %>%
+  count()
 ```
 
 **Question:** How many diesel cars are less than 10 years old?
 
-**Your answer:** [YOUR ANSWER]
+**Your answer:** 2040
 
 # Exercise 5: Grouping and Summarizing
 
@@ -187,9 +198,18 @@ avg_price_by_brand <- car_data %>%
 avg_price_by_brand
 
 # Calculate average mileage by fuel type
+avg_mileage_by_fuel <- car_data %>%
+  group_by(`Fuel type`)%>%
+  summarize(avg_mileage = mean(Mileage, na.rm = TRUE))
+
+avg_mileage_by_fuel
 
 
 # Count cars by manufacturer
+cars_by_manufacturer <- car_data %>%
+  count(Manufacturer)
+
+cars_by_manufacturer
 
 ```
 
@@ -197,7 +217,9 @@ avg_price_by_brand
 
 ```{r categorical-summaries}
 # Frequency table for price categories
+price_category_freq <- count(car_data, price_category)
 
+price_category_freq
 ```
 
 
