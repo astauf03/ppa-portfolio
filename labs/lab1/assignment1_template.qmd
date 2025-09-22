@@ -56,11 +56,12 @@ library(tidycensus)
 library(tidyverse)
 library(knitr)
 # Set your Census API key
-
+census_api_key("eeb46a4e68d059982c2b048f843063e19bc4c294")
 # Choose your state for analysis - assign it to a variable called my_state
+my_state <- "MI"
 ```
 
-**State Selection:** I have chosen **[Your State Name]** for this analysis because: [Brief explanation of why you chose this state]
+**State Selection:** I have chosen **[Michigan]** for this analysis because: I explicitly did not select Pennsylvania, as I am a PA resident and wish to play with other census data. Michigan was the first state to come to mind. 
 
 # Part 2: County-Level Resource Assessment
 
@@ -79,11 +80,21 @@ library(knitr)
 
 ```{r county-data}
 # Write your get_acs() code here
+county_data_2022 <- get_acs(geography = "county", 
+                         state = "MI",
+                         variables = c(median_household_income = "B19013_001", total_pop = "B01003_001" ),
+                         year = 2022,
+                         survey = "acs5",
+                         output = "wide")
+                         
 
 # Clean the county names to remove state name and "County" 
+county_data_2022 <- county_data_2022 %>%
+  mutate(county_data_2022_clean = str_remove(NAME,paste0("County, Michigan")))
 # Hint: use mutate() with str_remove()
 
 # Display the first few rows
+glimpse(county_data_2022)
 ```
 
 ## 2.2 Data Quality Assessment
@@ -102,8 +113,19 @@ library(knitr)
 
 ```{r income-reliability}
 # Calculate MOE percentage and reliability categories using mutate()
-
+MI_county_reliablility <- county_data_2022 %>%
+  mutate(
+    med_income_moe_pct = (median_household_incomeM / median_household_incomeE) * 100,
+    med_income_confi = case_when(
+      med_income_moe_pct < 5 ~ "High Confidence (<5%)",
+      med_income_moe_pct > 5 & med_income_moe_pct <10 ~ "Moderate Confidence (5% - 10%)",
+      med_income_moe_pct > 10  ~ "Low Confidence (>10%)"
+    )
+  )
 # Create a summary showing count of counties in each reliability category
+MI_reability_data <- MI_county_reliablility %>%
+  count(med_income_confi)%>%
+  mutate(percentage = n/sum(n)*100)
 # Hint: use count() and mutate() to add percentages
 ```
 
