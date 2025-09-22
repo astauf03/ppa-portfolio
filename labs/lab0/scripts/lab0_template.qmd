@@ -10,6 +10,7 @@ format:
     toc-location: left
     theme: cosmo
 execute:
+  enabled: false
   warning: false
   message: false
 ---
