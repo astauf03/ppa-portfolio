@@ -1,9 +1,0 @@
-[
-  {
-    "objectID": "weekly-notes/week-04-notes.html",
-    "href": "weekly-notes/week-04-notes.html",
-    "title": "Week 2 Notes",
-    "section": "",
-    "text": "Key Concepts Learned\n\nSetting up labs and learning to add data to lab.\nThe significance of census data and things to watch out for like margin of error (MOE).\nProxies are models that can help predict things like a good rental candidate, likelihood for a criminal to reoffend, etc.\n\n\n\nCoding Techniques\n\nmutate()\nselect()\nrename()\n(&gt;%&gt;)\n\n\n\nQuestions & Challenges\n\nTo pipe or not to pipe\n\n\n\nConnections to Policy\n\nAlgorithms play a role in predicting criminal justice, housing, finance, and healthcare decisions.\n\n\n\nReflection\n\nI want to learn more about how to adjust biases in the creation of proxy models."
-  }
-]
