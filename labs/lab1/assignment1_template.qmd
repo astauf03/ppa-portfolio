@@ -368,7 +368,7 @@ Both the black and LatinX communities face algorithmic biased simply because the
 
 Schoolcraft and Gogebic are one of the smallest counties in Michigan, with very small populations to begin with. Emphasizing the small size of both white and minority populations, the sample sizing options almost inherently too low. Decision makers are most likely not going to hold much regard for such small minority demographic numbers.
 
-A widespread implementation of MOE Flagging should be employed at the state level. Counties with small populations and even smaller minoritiy populations should not only adhere to ACS data, but also leverage an ethnographic approach to voice the experiences of the minorities within the counties.
+A widespread implementation of MOE Flagging should be employed at the state level. Counties with small populations and even smaller minority populations should not only adhere to ACS data, but also leverage an ethnographic approach to voice the experiences of the minorities within the counties.
 
 ## 6.3 Specific Recommendations
 
@@ -377,7 +377,7 @@ A widespread implementation of MOE Flagging should be employed at the state leve
 ```{r recommendations-data}
 # Create a summary table using your county reliability data
 # Include: county name, median income, MOE percentage, reliability category
-sum_table = selected_counties %>%
+sum_table = MI_county_reliablility %>%
   select(
     county_name = county_data_2022_clean,
     med_inc = med_household_incomeE,
@@ -411,21 +411,25 @@ kable(sum_table,
 
 **Your Task:** Use your analysis results to provide specific guidance to the department.
 
-1. **Counties suitable for immediate algorithmic implementation:** [List counties with high confidence data and explain why they're appropriate]
+1. **Counties suitable for immediate algorithmic implementation:** Unfortunately, the counties I set out to investigate do not meet these requirements. However, Michigan does have 56 counties that are suited for immediate algorithmic implementation. 
 
-2. **Counties requiring additional oversight:** [List counties with moderate confidence data and describe what kind of monitoring would be needed]
+2. **Counties requiring additional oversight:** Gogebic and 24 other counties require additional oversight and monitoring. Meaning, they are able to be placed through the algorithm, but their outputs should be evaluated before enacting on the recommendation.If need be, cross-reference with other administrative data like school enrollments. 
 
-3. **Counties needing alternative approaches:** [List counties with low confidence data and suggest specific alternatives - manual review, additional surveys, etc.]
+3. **Counties needing alternative approaches:** Schoolcraft and Keweenaw require immediate reevaluation. Supplemental work such as surveys, ethnographic surveying, and other public-facing methods of collection must be employed in addition with using the ACS data.  
+
 
 ## Questions for Further Investigation
 
 [List 2-3 questions that your analysis raised that you'd like to explore further in future assignments. Consider questions about spatial patterns, time trends, or other demographic factors.]
 
+1. Will variables like age and education retain the same confidence interval depending on their race, income, and county?
+2. I would like to explore the MOE in minorities from earlier in the millennium and compare it with the 2022 ACS survey to track changes in MOE, has it become more accurate, stagnant, or decreased in reliability over all?
+
 # Technical Notes
 
 **Data Sources:** 
 - U.S. Census Bureau, American Community Survey 2018-2022 5-Year Estimates
-- Retrieved via tidycensus R package on [date]
+- Retrieved via tidycensus R package on 09/28/2025.
 
 **Reproducibility:** 
 - All analysis conducted in R version 4.5.1
@@ -433,10 +437,13 @@ kable(sum_table,
 - Complete code and documentation available at: https://musa-5080-fall-2025.github.io/portfolio-setup-astauf03/
 
 **Methodology Notes:**
-[Describe any decisions you made about data processing, county selection, or analytical choices that might affect reproducibility]
+I choose two rural counties at random with differing MOE statuses. Including an urban county could have broadened my analysis. 
+High ~ >10, Moderate ~ >5 | <10, and Low ~ <5 were chosen due to the assignment instructions. 
+
+mutate(), summarize(), case_when(), select(), slice(), kable()
 
 **Limitations:**
-[Note any limitations in your analysis - sample size issues, geographic scope, temporal factors, etc.]
+Potentially may have misread the instructions and completed a different interpretation. Very baseline analysis, data could have been explored in greater detail.
 
 ---
 
