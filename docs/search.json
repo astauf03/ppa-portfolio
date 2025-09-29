@@ -1,0 +1,9 @@
+[
+  {
+    "objectID": "weekly-notes/week-03-notes.html",
+    "href": "weekly-notes/week-03-notes.html",
+    "title": "Week 3",
+    "section": "",
+    "text": "Key Concepts Learned\nSummary statistics is useful for investigating patterns. ACS data contains surplus of errors, planners fail to report them.\n\n\nCoding Techniques\n\nggplot(data)\naes(x, y,…)\ngeom_points(colors, size, decorate)\n\n\n\nQuestions & Challenges\nIs kable() mainly for a quick, but comprehensible way to represent a summary analysis?\n\n\nConnections to Policy\nPlanners should report MOEs because it affects minorities and at the end of the data, is inaccurate and misleading.\n\n\nReflection\n\nPlaying with ACS data seems like a great way to feel more confident with R and basic data dissemination."
+  }
+]

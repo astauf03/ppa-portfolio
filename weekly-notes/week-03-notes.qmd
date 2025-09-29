@@ -1,25 +1,22 @@
 ---
-title: "week-03-notes"
+title: "Week 3"
 date: "2025-09-22"
 ---
 
 ### Key Concepts Learned  
-### Key Concepts Learned  
-- Setting up labs and learning to add data to lab.
-- The significance of census data and things to watch out for like margin of error (MOE).
-- Proxies are models that can help predict things like a good rental candidate, likelihood for a criminal to reoffend, etc. 
+Summary statistics is useful for investigating patterns.
+ACS data contains surplus of errors, planners fail to report them. 
 
 ### Coding Techniques
-- mutate()
-- select()
-- rename()
-- (>%>)
+- ggplot(data)
+- aes(x, y,...)
+- geom_points(colors, size, decorate)
 
 ### Questions & Challenges
-- To pipe or not to pipe
+Is kable() mainly for a quick, but comprehensible way to represent a summary analysis?
 
 ### Connections to Policy
-- Algorithms play a role in predicting criminal justice, housing, finance, and healthcare decisions. 
+Planners should report MOEs because it affects minorities and at the end of the data, is inaccurate and misleading. 
 
 ### Reflection
-- I want to learn more about how to adjust biases in the creation of proxy models. 
+- Playing with ACS data seems like a great way to feel more confident with R and basic data dissemination.  
