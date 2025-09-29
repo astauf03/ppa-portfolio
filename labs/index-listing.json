@@ -1,6 +1,7 @@
 {
   "listing": "/labs/index.html",
   "items": [
-    "/labs/lab0/scripts/lab0_template.html"
+    "/labs/lab0/scripts/lab0_template.html",
+    "/labs/lab1/assignment1_template.html"
   ]
 }
