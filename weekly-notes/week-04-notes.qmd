@@ -1,0 +1,24 @@
+---
+title: "week-04-notes"
+format: html
+---
+### Key Concepts Learned  
+sf Package is responsible for reading shapefiles.
+st_transform() is the key to happiness, st_set_crs() is pain and suffering! 
+WGS84 should be avoided, use available region projections. 
+
+### Coding Techniques
+- st_filter()
+- st_intersects()
+- st_touches () excludes the field being searched from
+- st_distance() makes matrix
+- st_union () is equivalent to a dissolve in ArcGIS Pro
+
+### Questions & Challenges
+What functions are used for raster data? 
+
+### Connections to Policy
+Spatial representation of tracts.  
+
+### Reflection
+- Be very wary of CRS!

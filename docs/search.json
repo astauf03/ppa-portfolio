@@ -5,5 +5,12 @@
     "title": "Week 3",
     "section": "",
     "text": "Key Concepts Learned\nSummary statistics is useful for investigating patterns. ACS data contains surplus of errors, planners fail to report them.\n\n\nCoding Techniques\n\nggplot(data)\naes(x, y,…)\ngeom_points(colors, size, decorate)\n\n\n\nQuestions & Challenges\nIs kable() mainly for a quick, but comprehensible way to represent a summary analysis?\n\n\nConnections to Policy\nPlanners should report MOEs because it affects minorities and at the end of the data, is inaccurate and misleading.\n\n\nReflection\n\nPlaying with ACS data seems like a great way to feel more confident with R and basic data dissemination."
+  },
+  {
+    "objectID": "weekly-notes/week-04-notes.html",
+    "href": "weekly-notes/week-04-notes.html",
+    "title": "week-04-notes",
+    "section": "",
+    "text": "Key Concepts Learned\nsf Package is responsible for reading shapefiles. st_transform() is the key to happiness, st_set_crs() is pain and suffering! WGS84 should be avoided, use available region projections.\n\n\nCoding Techniques\n\nst_filter()\nst_intersects()\nst_touches () excludes the field being searched from\nst_distance() makes matrix\nst_union () is equivalent to a dissolve in ArcGIS Pro\n\n\n\nQuestions & Challenges\nWhat functions are used for raster data?\n\n\nConnections to Policy\nSpatial representation of tracts.\n\n\nReflection\n\nBe very wary of CRS!"
   }
 ]

@@ -204,11 +204,11 @@ pa_tracts_data <- get_acs(
 )
 
 # Join demographic data to tract boundaries
-tracts <- tracts %>%
+census_tracts <- census_tracts %>%
   left_join(pa_tracts_data, by = "GEOID")
 
 # Identify vulnerable populations (low-income tracts)
-low_income_tracts <- tracts %>%
+low_income_tracts <- census_tracts %>%
   filter(median_incomeE < 40000)
 
 low_income_tracts  <- low_income_tracts  %>%
@@ -258,10 +258,10 @@ p2 <- ggplot() +
 p1 | p2
 
 districts <- districts %>%
-  st_transform(st_crs(tracts))
+  st_transform(st_crs(census_tracts))
 
 # Average income by congressional district
-tracts_by_district <- tracts %>%
+tracts_by_district <- census_tracts %>%
   st_join(districts) %>%
   st_drop_geometry() %>%
   group_by(OBJECTID) %>%
