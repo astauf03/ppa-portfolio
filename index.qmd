@@ -15,7 +15,7 @@ Advanced spatial analysis and data science for urban planning and public policy.
 - **Final Project:** capstone modeling challenge
 
 ## About Me
-Greetings. My name is Alexandra Stauffer, an Urban Spatial Analytics student. I studied anthropology in my undergrad and became interested in geospatial realtionships and their applications in the real world. 
+Greetings. My name is Alex Stauffer, an Urban Spatial Analytics student. I studied anthropology in my undergrad and became interested in geospatial realtionships and their applications in the real world. 
 
 
 ## Contact
