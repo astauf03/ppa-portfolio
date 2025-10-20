@@ -477,6 +477,8 @@ Create a map highlighting underserved vulnerable tracts.
 ```{r}
 # Create detailed tract-level map
 
+tracts_underserved_map <- vul_tracts_project %>%
+  st_join(pa_counties_proj[, c("COUNTY_NAM")], join = st_within)
 
 ggplot() +
   geom_sf(data = pa_counties_proj, fill = "grey95", color = "black", linewidth = 0.3) +
@@ -891,12 +893,14 @@ ggplot() +
 - Brief interpretation of results (3-5 sentences)
 
 **Your interpretation:**
-
-[Write your findings here]
+The analysis reveals significant disparities in school accessibility across income levels in Philadelphia. Low-income tracts are on average 0.27 miles from the nearest district school, compared to 0.45 miles for high-income tracts—suggesting that district schools are actually more accessible in low-income neighborhoods. However, the pattern reverses for charter schools: low-income areas are 0.45 miles from the nearest charter school versus 0.80 miles for high-income areas. This indicates that charter school expansion has been uneven, with better coverage in wealthier neighborhoods. Medium-income tracts fall between both extremes for each school type. These findings suggest that while traditional district school infrastructure may serve lower-income communities adequately, charter school growth has not been equitable, potentially limiting educational choices for families in low-income areas. Policymakers should consider whether current charter school placement aligns with community needs and accessibility for all income levels.
+```{r}
+school_dist_summary
+```
 
 
 ## Finally - A few comments about your incorporation of feedback!
-Take a few moments to clean up your markdown document and then write a line or two or three about how you may have incorporated feedback that you recieved after your first assignment. 
+The main comment I recieved last time was to hide my API key, so I did as such this time. 
 
 ---
 

@@ -1,0 +1,18 @@
+---
+title: "week-05-notes"
+format: html
+---
+
+### Key Concepts Learned  
+
+
+### Coding Techniques
+set.seed(123): during Train/Test Splitting, this command ensures the random selection is consist through each test.
+
+### Questions & Challenges
+ 
+
+### Connections to Policy
+  
+
+### Reflection
